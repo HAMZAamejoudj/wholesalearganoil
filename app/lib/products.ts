@@ -765,6 +765,807 @@ export const PRODUCTS: Product[] = [
     ctaDescription:
       "Tell us your volume and whether you need organic certification. We will quote cooperative-sourced oil packed for your market.",
   },
+  {
+    slug: "pure-moroccan-argan-oil",
+    chip: "Pure Oil",
+    cardTitle: "100% Pure Moroccan Argan Oil",
+    cardSummary:
+      "The gold standard single-ingredient cosmetic oil. Cold pressed, unrefined, and deodorized options available for face, hair, and body.",
+    image: "/assets/img/argan-oil-private-label-bottle.jpg",
+    imageAlt: "Private label bottle of 100% pure Moroccan argan oil with dropper",
+    name: "100% Pure Moroccan Argan Oil Private Label",
+    h1: "100% Pure Moroccan Argan Oil — Private Label & Wholesale",
+    lede:
+      "Factory-direct, retail-ready 100% pure cold-pressed Moroccan argan oil bottled under your brand. Available in 30ml, 50ml, and 100ml amber or clear glass droppers with custom foil labels, tamper-evident seals, and full batch COA compliance.",
+    metaTitle: "100% Pure Moroccan Argan Oil | Private Label & Wholesale",
+    metaDescription:
+      "Buy wholesale private label 100% pure Moroccan argan oil. 30ml, 50ml, 100ml dropper bottles. Low MOQ from 100 units. Direct Agadir export with COA.",
+    keywords: [
+      "100 pure argan oil",
+      "private label argan oil",
+      "pure moroccan argan oil wholesale",
+      "argan oil dropper bottles",
+      "white label argan oil",
+    ],
+    facts: [
+      { label: "Extraction", value: "100% Cold-pressed mechanical extraction" },
+      { label: "Available Sizes", value: "30ml, 50ml, 100ml glass dropper bottles" },
+      { label: "Minimum Order", value: "100 units (White Label) / 500 (Custom Box)" },
+      { label: "Turnaround", value: "2 to 3 weeks production & dispatch" },
+    ],
+    overview: {
+      title: "The Essential Hero SKU for Clean Beauty & Wellness Brands",
+      paragraphs: [
+        "Pure Moroccan argan oil (INCI: Argania Spinosa Kernel Oil) remains the undisputed gold standard in botanical single-ingredient beauty. Sourced directly from our certified women's cooperatives in the Souss-Massa valley, each batch is cold-pressed from unroasted kernels to ensure maximum tocopherol (Vitamin E) and essential fatty acid retention.",
+        "For indie brands, dermatologists, salons, and established cosmetics houses, this SKU represents the fastest route to market. We deliver turn-key bottles filled, capped with your choice of matte black, bamboo, or metallic gold droppers, and labelled with your custom brand artwork.",
+        "Whether you require virgin cold-pressed oil with its authentic delicate nutty aroma or lightly steam-filtered deodorized oil for scent-neutral formulations, our Agadir facility accommodates your exact brand specs.",
+      ],
+      quote:
+        "Zero fillers, zero silicones, zero water. Pure organic liquid gold packaged directly at the Moroccan source.",
+      image: "/assets/img/cosmetic-argan.jpg",
+      imageAlt: "Pure Moroccan argan oil droplets and golden glass packaging",
+    },
+    benefitsTitle: "Key Formulation & Product Advantages",
+    benefitsIntro:
+      "Why single-ingredient pure argan oil remains a top seller in global skincare and haircare.",
+    benefits: [
+      {
+        title: "Multi-Purpose Versatility",
+        body: "One product addresses facial anti-aging, cuticle nourishment, split-end repair, and deep body hydration.",
+      },
+      {
+        title: "High Natural Vitamin E",
+        body: "Packed with over 600 mg/kg of natural tocopherols, providing powerful antioxidant stability and skin barrier support.",
+      },
+      {
+        title: "Optimal Fatty Acid Profile",
+        body: "Composed of roughly 80% unsaturated oleic and linoleic acids that penetrate deeply without clogging pores (comedogenic rating 0).",
+      },
+      {
+        title: "Consumer Trust & Proven Demand",
+        body: "Recognized globally as a premium luxury staple with exceptionally strong repeat-purchase loyalty.",
+      },
+    ],
+    processTitle: "Our Private Label Bottling Process",
+    processIntro:
+      "From the press in Agadir to packaged retail cartons ready for global shipping.",
+    processImage: "/assets/img/production-argan.jpg",
+    processImageAlt: "Cosmetic bottling line for argan oil private label",
+    process: [
+      {
+        title: "Cooperative Kernel Selection",
+        body: "Only premium whole kernels are sorted and mechanically pressed at strict room temperatures under 40°C.",
+      },
+      {
+        title: "Dual Micron Filtration",
+        body: "Clarified through food- and cosmetic-grade filters to remove sediment while retaining micro-nutrients.",
+      },
+      {
+        title: "Cleanroom Bottle Filling",
+        body: "Precision pneumatic filling in sterile ISO-compliant facilities into UV-protective amber, matte, or clear glass.",
+      },
+      {
+        title: "Custom Labeling & Tamper Seal",
+        body: "High-resolution waterproof label application, batch lot coding, expiration dating, and tamper-evident shrink bands.",
+      },
+    ],
+    specsTitle: "Bottling & Packaging Specifications",
+    specs: [
+      { label: "INCI Name", value: "Argania Spinosa Kernel Oil" },
+      { label: "Standard Bottle Sizes", value: "30 ml (1 fl oz), 50 ml (1.7 fl oz), 100 ml (3.4 fl oz)" },
+      { label: "Closure Options", value: "Glass pipette dropper (bamboo, gold, silver, or matte black collar)" },
+      { label: "Glass Finishes", value: "Amber, Frosted Clear, Matte Black, UV-Shielding Miron Violet" },
+      { label: "Shelf Life", value: "24 months from pressing date (cool, dark storage)" },
+      { label: "Minimum Order (MOQ)", value: "100 bottles per SKU with standard packaging" },
+      { label: "Lead Time", value: "10-15 business days plus express air or ocean transit" },
+      { label: "Certificates Provided", value: "Certificate of Analysis (COA), MSDS, Microbe Test, Origin Certificate" },
+    ],
+    applicationsTitle: "Target Retail & Brand Channels",
+    applications: [
+      {
+        title: "Indie Clean Beauty Brands",
+        body: "Position as a hero organic face oil with high margins and clean ingredient claims.",
+      },
+      {
+        title: "Luxury Spas & Wellness Clinics",
+        body: "Offer as an exclusive take-home post-facial elixir or manicure repair oil.",
+      },
+      {
+        title: "High-End Hair Salons",
+        body: "Retail as a pure finishing serum for heat protection, frizz control, and luminous shine.",
+      },
+      {
+        title: "Amazon & E-Commerce Sellers",
+        body: "Launch quickly with compliant barcodes, retail cartons, and high consumer search volume.",
+      },
+    ],
+    faqTitle: "Private Label Argan Oil — Frequently Asked Questions",
+    faq: [
+      {
+        question: "Can I choose between scented and unscented or deodorized oil?",
+        answer:
+          "Yes. We offer authentic raw cold-pressed oil with its mild natural nutty aroma, or deodorized cosmetic argan oil that has been vacuum-filtered to remove all scent.",
+      },
+      {
+        question: "Do you supply the bottles and labels or can I provide my own?",
+        answer:
+          "We offer full turnkey solutions including glass bottles, droppers, and custom waterproof printing. Alternatively, you can ship us your own packaging for contract filling.",
+      },
+      {
+        question: "What is the minimum order quantity for custom printed boxes?",
+        answer:
+          "Bottle filling with your label starts at only 100 units. If you require custom die-cut retail outer boxes, MOQ is 500 units.",
+      },
+      {
+        question: "Can you provide barcodes and regulatory compliance documentation?",
+        answer:
+          "Yes, we print your EAN/UPC barcodes, batch numbers, and provide all necessary technical dossiers for EU CPNP, US FDA, or Health Canada registration.",
+      },
+    ],
+    ctaTitle: "Launch Your Private Label Argan Oil Line",
+    ctaDescription:
+      "Request a sample kit or discuss your packaging, labeling, and delivery schedule directly with our Agadir export specialists.",
+  },
+  {
+    slug: "argan-hair-treatment-serum",
+    chip: "Hair Care",
+    cardTitle: "Argan Hair Treatment Serum",
+    cardSummary:
+      "Enriched formula designed for shine, frizz control, heat protection, and split ends. Lightweight, silky finish that absorbs quickly.",
+    image: "/assets/img/moroccan-organic-cosmetics.jpg",
+    imageAlt: "Private label argan hair treatment serum bottles and pumps",
+    name: "Argan Hair Treatment Serum Private Label",
+    h1: "Private Label Argan Hair Treatment Serum Wholesale",
+    lede:
+      "High-performance salon-grade hair treatment serum formulated with pure Moroccan argan oil, lightweight silicones, and vitamin E. Delivers instant glass shine, humidity resistance, heat defense up to 230°C, and silky soft ends without weigh-down.",
+    metaTitle: "Private Label Argan Hair Serum | Salon Wholesale Formula",
+    metaDescription:
+      "Wholesale private label argan hair serum. 50ml and 100ml pump bottles. Heat defense, anti-frizz, salon shine. Low MOQ from 200 units with custom branding.",
+    keywords: [
+      "argan hair serum wholesale",
+      "private label hair serum",
+      "moroccan oil hair treatment bulk",
+      "salon argan serum private label",
+      "anti frizz argan serum",
+    ],
+    facts: [
+      { label: "Formula", value: "Argan oil + botanical silicones + Vitamin E" },
+      { label: "Packaging", value: "50ml, 100ml amber or frosted glass pump bottles" },
+      { label: "MOQ", value: "200 units with custom silk-screen or label" },
+      { label: "Key Benefit", value: "Instant frizz control, heat protection & high shine" },
+    ],
+    overview: {
+      title: "Professional Salon-Grade Argan Hair Therapy",
+      paragraphs: [
+        "Argan oil is globally celebrated for hair transformation. Our Private Label Argan Hair Treatment Serum is a proprietary professional salon formula engineered to bridge the gap between heavy raw oils and featherweight finishing elixirs.",
+        "Formulated with cold-pressed Moroccan argan oil enriched with cyclomethicone, dimethiconol, and natural tocopherols, it glides effortlessly through wet or dry hair. It seals porous cuticles, detangles knotty lengths, and locks out ambient humidity to prevent frizz in all climates.",
+        "This turnkey product is available in luxurious glass pump dispensers or durable PET bottles with treatment pumps, finished with subtle signature amber, oriental vanilla, or fragrance-free formulations.",
+      ],
+      quote:
+        "Salon mirror shine, thermal defense, and weightless softness in a single multi-action drop.",
+      image: "/assets/img/argan-oil-for-hair.jpg",
+      imageAlt: "Argan oil hair treatment serum application for radiant shine",
+    },
+    benefitsTitle: "Performance Benefits for Hair Formulations",
+    benefitsIntro:
+      "Engineered to deliver noticeable, touchable results after a single application.",
+    benefits: [
+      {
+        title: "Thermal Protection up to 230°C",
+        body: "Shields delicate hair fibers from flat irons, curling wands, and blow dryers to prevent keratin degradation.",
+      },
+      {
+        title: "All-Day Anti-Humidity Shield",
+        body: "Seals the cuticle layer against humidity swings, banishing frizz and flyaways for up to 48 hours.",
+      },
+      {
+        title: "Featherlight Non-Greasy Absorption",
+        body: "Leaves fine to thick hair completely weightless with movement, bounce, and non-oily touch.",
+      },
+      {
+        title: "Split-End Healing & Slip",
+        body: "Lubricates brittle ends to prevent mechanical breakage during brushing and styling.",
+      },
+    ],
+    processTitle: "Precision Blending & Bottling Standards",
+    processIntro:
+      "Manufactured under strict ISO 22716 Good Manufacturing Practice (GMP) standards.",
+    processImage: "/assets/img/argan-beauty.jpg",
+    processImageAlt: "Hair serum formulation and blending laboratory in Morocco",
+    process: [
+      {
+        title: "Homogenized Emulsification",
+        body: "High-shear blending of organic argan oil with cosmetic slip agents ensures permanent stability without separation.",
+      },
+      {
+        title: "Custom Fragrance Infusion",
+        body: "Optional infusion of IFRA-compliant allergen-tested fragrances (oriental blossom, French amber, citrus vanilla).",
+      },
+      {
+        title: "Viscosity & pH Validation",
+        body: "Every batch is tested for exact viscosity (1200-1800 cPs) to ensure smooth pump dispensing.",
+      },
+      {
+        title: "Leak-Proof Treatment Pump Assembly",
+        body: "Fitted with precision cosmetic pumps with secure twist-lock mechanisms and transparent overcaps.",
+      },
+    ],
+    specsTitle: "Product Specifications & Packaging",
+    specs: [
+      { label: "Function", value: "Leave-in hair serum, heat protectant, shine elixir" },
+      { label: "Standard Bottle Sizes", value: "50 ml (1.7 fl oz), 100 ml (3.4 fl oz)" },
+      { label: "Packaging Formats", value: "Heavy-base glass bottle, frosted amber, or amber PET" },
+      { label: "Dispenser Types", value: "Cosmetic treatment lotion pump (Black, White, Gold, Silver)" },
+      { label: "Fragrance Options", value: "Fragrance-Free, Oriental Amber, Warm Vanilla, Custom" },
+      { label: "Minimum Order (MOQ)", value: "200 units" },
+      { label: "Lead Time", value: "2 to 4 weeks" },
+      { label: "Safety Data", value: "Complete MSDS, stability test, CPNP/FDA dossier" },
+    ],
+    applicationsTitle: "Target Markets for Hair Serum",
+    applications: [
+      {
+        title: "Professional Salon Retailing",
+        body: "Backbar treatment stations and stylist retail displays for high margins.",
+      },
+      {
+        title: "Direct-to-Consumer Hair Care Brands",
+        body: "Hero styling product for DTC subscription boxes and hair wellness lines.",
+      },
+      {
+        title: "Textured & Curly Hair Collections",
+        body: "Moisture sealing oil for curls, coils, and chemically processed tresses.",
+      },
+    ],
+    faqTitle: "Argan Hair Treatment Serum — Buyer FAQ",
+    faq: [
+      {
+        question: "Can fine hair use this serum without looking greasy?",
+        answer:
+          "Yes. Our blend is specifically formulated to evaporate light volatiles upon application, leaving behind only a silky micro-layer of argan nutrition without clumping fine strands.",
+      },
+      {
+        question: "Is this serum color-safe and sulfate-free?",
+        answer:
+          "Absolutely. It contains zero sulfates, parabens, or harsh alcohols, making it completely safe for keratin-treated, bleached, and color-treated hair.",
+      },
+      {
+        question: "Can we supply our own custom signature scent?",
+        answer:
+          "Yes, for orders over 500 units we can incorporate your proprietary fragrance oil subject to IFRA stability verification.",
+      },
+    ],
+    ctaTitle: "Order Wholesale Argan Hair Serum",
+    ctaDescription:
+      "Create your customized salon-grade hair serum with custom pumps, bottles, and signature branding.",
+  },
+  {
+    slug: "argan-prickly-pear-face-elixir",
+    chip: "Anti-Aging",
+    cardTitle: "Argan & Prickly Pear Face Elixir",
+    cardSummary:
+      "High-value luxury blend combining organic argan oil with rare prickly pear seed oil and vitamin E for deep cellular hydration and youth restoration.",
+    image: "/assets/img/cosmetic-argan-bottles.jpg",
+    imageAlt: "Argan and prickly pear seed oil luxury face elixir bottles",
+    name: "Argan & Prickly Pear Face Elixir Private Label",
+    h1: "Argan & Prickly Pear Face Elixir — Luxury Anti-Aging Wholesale",
+    lede:
+      "The pinnacle of Moroccan botanical luxury. Formulated with 100% pure cold-pressed argan oil combined with rare virgin prickly pear seed oil (Opuntia Ficus-Indica) and natural vitamin E. Designed for premium prestige skincare lines requiring maximum anti-wrinkle potency.",
+    metaTitle: "Argan & Prickly Pear Face Elixir | Private Label Anti-Aging",
+    metaDescription:
+      "Prestige private label argan & prickly pear face elixir. Anti-aging luxury oil in 30ml/50ml droppers. High margin botanical formula. MOQ 100 units.",
+    keywords: [
+      "prickly pear argan oil wholesale",
+      "private label face elixir",
+      "anti aging facial oil private label",
+      "argan prickly pear serum",
+      "luxury moroccan face oil",
+    ],
+    facts: [
+      { label: "Key Actives", value: "Organic Argan Oil + Prickly Pear Seed Oil (Opuntia)" },
+      { label: "Antioxidant Level", value: "Over 1000 mg/kg natural Vitamin E (Tocopherols)" },
+      { label: "Packaging", value: "30ml, 50ml amber / matte black glass droppers" },
+      { label: "Prestige Margin", value: "High retail value ($65 - $120+ retail MSRP)" },
+    ],
+    overview: {
+      title: "The Most Potent Botanical Anti-Aging Blend from Morocco",
+      paragraphs: [
+        "Prickly pear seed oil (Opuntia Ficus-Indica) is renowned as one of the world's most precious and expensive cosmetic oils, requiring nearly one ton of cactus fruit to extract a single liter of pure seed oil. It contains three times more vitamin E than argan oil and an extraordinarily high concentration of betalains and phytosterols.",
+        "By harmonizing the intense cell-regenerative power of prickly pear with the deep barrier-replenishing lipid matrix of Moroccan argan oil, our Face Elixir delivers an incomparable anti-aging synergy. Fine lines appear softened, dark circles are visibly lightened, and skin elasticity is revitalized.",
+        "This turnkey formulation is tailored for luxury skincare brands, clean beauty boutiques, and anti-aging aesthetic clinics seeking exceptional shelf appeal and transformative clinical performance.",
+      ],
+      quote:
+        "Two of Morocco's most legendary botanical treasures blended into a golden, fast-absorbing youth nectar.",
+      image: "/assets/img/Prickly Pear Seed Oil.jpg",
+      imageAlt: "Prickly pear cactus fruit and seeds used for facial oil extraction",
+    },
+    benefitsTitle: "Clinically Coveted Anti-Aging Potency",
+    benefitsIntro:
+      "A potent powerhouse of natural phytosterols, linoleic acid (Omega-6), and polyphenols.",
+    benefits: [
+      {
+        title: "Superior Under-Eye Dark Circle Brightening",
+        body: "High vitamin K content from prickly pear seeds promotes capillary microcirculation, visibly diminishing dark circles.",
+      },
+      {
+        title: "Intense Cellular Regeneration",
+        body: "Phytosterols stimulate cellular turnover and collagen defense against photoaging and oxidative UV stress.",
+      },
+      {
+        title: "Featherweight Dry-Oil Finish",
+        body: "Rich in linoleic acid, this elixir absorbs instantaneously into the dermis without any greasy residue.",
+      },
+      {
+        title: "Deep Transepidermal Moisture Lock",
+        body: "Argan's squalene and sterols reinforce the stratum corneum barrier against environmental dehydration.",
+      },
+    ],
+    processTitle: "Cold Press Extraction & Synergy Blending",
+    processIntro:
+      "Pure unroasted seed pressing and nitrogen-purged bottling to preserve heat-sensitive actives.",
+    processImage: "/assets/img/img2.jfif",
+    processImageAlt: "Extraction and testing of prickly pear and argan oil in Morocco",
+    process: [
+      {
+        title: "Cold-Pressed Cactus Seed Extraction",
+        body: "Seeds are separated from wild Moroccan cactus fruit, thoroughly sun-dried, and gently cold-pressed without chemical solvents.",
+      },
+      {
+        title: "Ratio-Optimized Balancing",
+        body: "Carefully blended in oxygen-free stainless steel tanks to achieve the optimal 70/30 or custom ratio for skin absorption.",
+      },
+      {
+        title: "Nitrogen Purging",
+        body: "Bottles are purged with food-grade nitrogen before filling to eliminate dissolved oxygen and extend active freshness.",
+      },
+      {
+        title: "Prestige Glass Dropper Capping",
+        body: "Sealed with luxury heavy-base glass droppers, UV-blocking amber, or velvet matte soft-touch glass.",
+      },
+    ],
+    specsTitle: "Formulation & Packaging Specs",
+    specs: [
+      { label: "INCI Ingredients", value: "Argania Spinosa Kernel Oil, Opuntia Ficus-Indica Seed Oil, Tocopherol" },
+      { label: "Target Skin Types", value: "Mature, dry, combination, sensitive, hyperpigmented" },
+      { label: "Standard Volumes", value: "30 ml (1 fl oz), 50 ml (1.7 fl oz)" },
+      { label: "Packaging Options", value: "Matte black dropper, amber glass dropper, frosted white glass" },
+      { label: "Pipette Materials", value: "Glass pipette with gold/black aluminum collar and silicone bulb" },
+      { label: "Shelf Life", value: "24 months sealed" },
+      { label: "MOQ", value: "100 units" },
+      { label: "Lead Time", value: "2 to 3 weeks" },
+    ],
+    applicationsTitle: "Ideal Brand Positioning",
+    applications: [
+      {
+        title: "Luxury Prestige Skincare Lines",
+        body: "Positioned as the flagship overnight repair nectar or anti-wrinkle facial oil.",
+      },
+      {
+        title: "Medical Spa & Aesthetician Backbar",
+        body: "Post-microneedling, chemical peel, or dermaplaning soothing recovery treatment.",
+      },
+      {
+        title: "Boutique Clean Beauty Retailers",
+        body: "Appeals to discerning shoppers demanding 100% natural, active-rich plant skincare.",
+      },
+    ],
+    faqTitle: "Argan & Prickly Pear Elixir — FAQ",
+    faq: [
+      {
+        question: "What percentage of prickly pear seed oil is included in the elixir?",
+        answer:
+          "Our standard hero formula features a generous, clinically effective concentration (typically 15% to 30% pure virgin prickly pear seed oil). We can also customize the ratio to your target price point.",
+      },
+      {
+        question: "Does this elixir cause breakouts on acne-prone skin?",
+        answer:
+          "No. Both argan and prickly pear seed oils have a comedogenic rating of 0. Their high linoleic acid content actually helps balance sebum and clear congested skin.",
+      },
+      {
+        question: "Can we request custom essential oil scenting?",
+        answer:
+          "Yes, we can add subtle natural essential oils such as Moroccan Damask Rose, Neroli, or Frankincense upon request.",
+      },
+    ],
+    ctaTitle: "Formulate Your Luxury Anti-Aging Elixir",
+    ctaDescription:
+      "Request formulation samples and discover why argan & prickly pear is the fastest growing luxury skincare segment.",
+  },
+  {
+    slug: "argan-beard-conditioning-oil",
+    chip: "Men's Grooming",
+    cardTitle: "Argan Beard Conditioning Oil",
+    cardSummary:
+      "Deep conditioning blend for beard hair and facial skin. Softens coarse hair, reduces beard itch, and provides a subtle, natural masculine scent.",
+    image: "/assets/img/private-label-products.jpg",
+    imageAlt: "Private label argan beard conditioning oil bottles for men's grooming",
+    name: "Argan Beard Conditioning Oil Private Label",
+    h1: "Private Label Argan Beard Conditioning Oil Wholesale",
+    lede:
+      "Premium artisan beard care formulated for modern barbershops, men's grooming brands, and boutique retail. Combines pure Moroccan argan oil with jojoba, sweet almond, and botanical extracts to soften wire-like beard bristles, eliminate beard dandruff (beardruff), and soothe itchy facial skin.",
+    metaTitle: "Private Label Argan Beard Oil | Barber & Men's Grooming Wholesale",
+    metaDescription:
+      "Private label argan beard oil wholesale. 30ml and 60ml bottles. Softens coarse whiskers, stops beard itch. Low MOQ 150 units for barbershop lines.",
+    keywords: [
+      "argan beard oil wholesale",
+      "private label beard oil",
+      "barbershop beard conditioning oil",
+      "men grooming argan oil bulk",
+      "beard oil manufacturer morocco",
+    ],
+    facts: [
+      { label: "Key Actives", value: "Moroccan Argan + Golden Jojoba + Sweet Almond Oil" },
+      { label: "Fragrance Notes", value: "Atlas Cedarwood, Oud Wood, Sandalwood or Unscented" },
+      { label: "Packaging", value: "30ml, 60ml amber glass or matte black bottles" },
+      { label: "MOQ", value: "150 units with custom barber-grade labeling" },
+    ],
+    overview: {
+      title: "The Foundation of Superior Modern Men's Grooming",
+      paragraphs: [
+        "Coarse facial hair demands a unique molecular weight: an oil heavy enough to soften wiry whiskers, yet light enough to penetrate the skin beneath without clogging pores or triggering ingrown hairs. Moroccan argan oil is the undisputed gold standard for men's beard maintenance.",
+        "Our Private Label Beard Conditioning Oil blends certified cold-pressed Moroccan argan with balancing jojoba and sweet almond oils. It conditions thick whiskers, prevents flakey skin, stimulates healthy follicle growth, and leaves a tidy, soft beard with subtle matte sheen.",
+        "Available in signature masculine scents derived from natural steam-distilled essential oils — including authentic Moroccan Atlas Cedarwood, Royal Oud, Spiced Tobacco, or clean Unscented for sensitive complexions.",
+      ],
+      quote:
+        "Tames rebellious whiskers, eliminates itch, and keeps beards impeccably groomed and fragranced.",
+      image: "/assets/img/img3.jfif",
+      imageAlt: "Men's grooming argan beard oil styling and application",
+    },
+    benefitsTitle: "Formulated Specifically for Coarse Facial Hair",
+    benefitsIntro:
+      "Dual-action benefits addressing both the beard hair and the sensitive facial dermis beneath.",
+    benefits: [
+      {
+        title: "Eliminates Beardruff & Dry Flakes",
+        body: "Deeply moisturizes the hidden skin beneath facial hair, stopping flaking and uncomfortable tightness.",
+      },
+      {
+        title: "Softens Bristles for Touchability",
+        body: "Penetrates coarse beard shafts to soften whiskers, preventing scratching during close contact.",
+      },
+      {
+        title: "Healthy Follicle Support",
+        body: "Antioxidants and fatty acids nourish roots to encourage fuller, more even beard coverage.",
+      },
+      {
+        title: "Non-Greasy Natural Finish",
+        body: "Absorbs within minutes leaving a natural, healthy beard luster without oily transfer to shirts or hands.",
+      },
+    ],
+    processTitle: "Barbershop Craftsmanship & Clean Bottling",
+    processIntro:
+      "Small-batch blending for peak aromatic stability and shelf performance.",
+    processImage: "/assets/img/argan-oil-bottles.jpg",
+    processImageAlt: "Barbershop beard oil bottling and packaging process",
+    process: [
+      {
+        title: "Nutrient Carrier Base Blend",
+        body: "Cold-pressed argan oil is married with cold-pressed jojoba and vitamin E for balanced absorption.",
+      },
+      {
+        title: "Essential Oil Scenting",
+        body: "Infused with therapeutic-grade botanical scents tested for zero skin irritation or photo-toxicity.",
+      },
+      {
+        title: "Filtered Purity Inspection",
+        body: "Double-filtered to ensure zero botanical sediment and flawless golden clarity.",
+      },
+      {
+        title: "Matte Glass Dropper Assembly",
+        body: "Filled into UV-protective amber or apothecary matte black bottles with precise flow-control droppers.",
+      },
+    ],
+    specsTitle: "Packaging & Formulation Details",
+    specs: [
+      { label: "Primary Ingredients", value: "Argania Spinosa Kernel Oil, Simmondsia Chinensis Seed Oil, Prunus Amygdalus Dulcis Oil, Tocopherol" },
+      { label: "Bottle Sizes", value: "30 ml (1 fl oz), 60 ml (2 fl oz)" },
+      { label: "Bottle Styles", value: "Boston round amber glass, matte black coated glass, clear apothecary" },
+      { label: "Cap Options", value: "Calibrated glass dropper, euro-dropper insert, lotion pump" },
+      { label: "Fragrance Choices", value: "Moroccan Atlas Cedar, Smoky Oud, Citrus Sandalwood, Pure Unscented" },
+      { label: "MOQ", value: "150 units" },
+      { label: "Lead Time", value: "2 to 3 weeks" },
+      { label: "Documentation", value: "Full COA, IFRA fragrance certificates, MSDS" },
+    ],
+    applicationsTitle: "Target Commercial Opportunities",
+    applications: [
+      {
+        title: "Barbershops & Grooming Salons",
+        body: "High markup retail product at reception desks and service add-on during hot towel shaves.",
+      },
+      {
+        title: "Men's Lifestyle & E-Commerce Brands",
+        body: "Essential SKU for men's personal care subscription boxes and gift sets.",
+      },
+      {
+        title: "Apparel & Tattoo Parlors",
+        body: "Companion lifestyle accessory for modern urban grooming collections.",
+      },
+    ],
+    faqTitle: "Private Label Beard Oil — FAQ",
+    faq: [
+      {
+        question: "Can this oil also be used as a pre-shave oil?",
+        answer:
+          "Yes. The argan and jojoba slip provides an outstanding barrier against razor burn and irritation for clients who trim neckline edges.",
+      },
+      {
+        question: "Are the fragrances all natural or synthetic?",
+        answer:
+          "We offer both 100% pure essential oil blends (cedarwood, cypress, vetiver) as well as IFRA-certified cosmetic fragrance profiles depending on your brand preference.",
+      },
+      {
+        question: "Can you provide waterproof labels resistant to oil drips?",
+        answer:
+          "All our labels are printed on synthetic waterproof vinyl or BOPP with matte or gloss lamination so oil drops wipe clean without smudging.",
+      },
+    ],
+    ctaTitle: "Launch Your Custom Beard Grooming Line",
+    ctaDescription:
+      "Create your signature barbershop beard oil with personalized fragrances and premium bottle designs.",
+  },
+  {
+    slug: "argan-body-massage-oil",
+    chip: "Body Care",
+    cardTitle: "Argan Body & Massage Oil",
+    cardSummary:
+      "Versatile, nourishing body oil that locks in moisture after showering or provides smooth glide for professional spa massage therapies.",
+    image: "/assets/img/argan-oil-bottles.jpg",
+    imageAlt: "Private label argan body and massage oil bottles",
+    name: "Argan Body & Massage Oil Private Label",
+    h1: "Private Label Argan Body & Massage Oil Wholesale",
+    lede:
+      "Luxurious professional spa-grade body and massage oil combining pure Moroccan argan oil with botanical emollients. Engineered for effortless glide without tacky drag during massage, or as an all-over daily post-shower dry oil for satin-soft skin.",
+    metaTitle: "Private Label Argan Body & Massage Oil | Spa Wholesale",
+    metaDescription:
+      "Wholesale private label argan body and massage oil. 100ml, 200ml, 250ml pump bottles. Premium glide for luxury spas and body care brands. MOQ 100.",
+    keywords: [
+      "argan body oil wholesale",
+      "private label massage oil",
+      "moroccan spa argan oil bulk",
+      "professional massage oil argan",
+      "body oil manufacturer morocco",
+    ],
+    facts: [
+      { label: "Texture", value: "Smooth glide, non-sticky satin absorption" },
+      { label: "Packaging", value: "100ml, 200ml, 250ml pump or aluminum bottles" },
+      { label: "Target", value: "Luxury hotel spas, wellness centers, body care lines" },
+      { label: "MOQ", value: "100 units (White Label) / 500 units (Custom Silk Print)" },
+    ],
+    overview: {
+      title: "The Quintessential Moroccan Hammam & Spa Luxury",
+      paragraphs: [
+        "For centuries, Moroccan body wellness rituals have centered around the restorative touch of argan oil. In modern luxury spa environments, therapists require an oil that strikes the perfect equilibrium: extended workability and glide without greasy pooling, followed by deep skin absorption that leaves the guest glowing rather than stained.",
+        "Our Argan Body & Massage Oil is formulated using cold-pressed argan oil as the hero active, fortified with skin-softening sweet almond, apricot kernel, and fractionated coconut oil. It spreads smoothly over large muscle groups, releases subtle aromatic tension, and drenches dry skin in essential fatty acids.",
+        "Offered in 100ml, 200ml, and 250ml sleek pump bottles or eco-chic brushed aluminum containers with lockable lotion pumps for spa cabana convenience.",
+      ],
+      quote:
+        "Unsurpassed glide for professional therapists and lingering velvety hydration for the whole body.",
+      image: "/assets/img/argan-beauty.jpg",
+      imageAlt: "Moroccan luxury spa body massage with golden argan oil",
+    },
+    benefitsTitle: "Spa Performance & Body Nourishment",
+    benefitsIntro:
+      "Formulated to satisfy both demanding licensed massage therapists and luxury retail consumers.",
+    benefits: [
+      {
+        title: "Effortless Long-Glide Workability",
+        body: "Provides continuous smooth glide for deep tissue, Swedish, and lymphatic massage without tacky resistance.",
+      },
+      {
+        title: "Locks in Post-Shower Hydration",
+        body: "Applied to damp skin after bathing, it traps water molecules inside the epidermis for 24-hour supple softness.",
+      },
+      {
+        title: "Calms Sun-Exposed & Parched Skin",
+        body: "High squalene and sterol concentrations soothe sun-kissed skin, peeling, and rough elbow and heel patches.",
+      },
+      {
+        title: "Clean Non-Staining Formula",
+        body: "Washes cleanly out of professional spa linens and cotton towels when laundered with standard commercial cycles.",
+      },
+    ],
+    processTitle: "Spa Formulation & Filling Integrity",
+    processIntro:
+      "Precision blended for optimal thermodynamic slip and extended shelf stability.",
+    processImage: "/assets/img/pallet-export.jpg",
+    processImageAlt: "Body care oil packaging and export preparation",
+    process: [
+      {
+        title: "Emollient Matrix Balancing",
+        body: "Argan oil is balanced with light botanical lipids to achieve the exact viscosity required for effortless spreading.",
+      },
+      {
+        title: "Aromatherapy Infusion",
+        body: "Infused with therapeutic essential oil synergies (Verbena & Orange Blossom, Moroccan Mint, Damask Rose, or Eucalyptus).",
+      },
+      {
+        title: "Microbiological Clearance",
+        body: "Tested for zero water content and complete pathogen-free purity to guarantee 2-year shelf freshness.",
+      },
+      {
+        title: "Ergonomic Dispenser Fitting",
+        body: "Equipped with wide-orifice locking lotion pumps or leak-proof aluminum caps designed for oily hand handling.",
+      },
+    ],
+    specsTitle: "Packaging Specifications & Options",
+    specs: [
+      { label: "Usage", value: "Full body hydration oil, professional spa massage medium, bath soak" },
+      { label: "Standard Bottle Sizes", value: "100 ml (3.4 fl oz), 200 ml (6.8 fl oz), 250 ml (8.5 fl oz), 1L Spa Jug" },
+      { label: "Packaging Materials", value: "Amber PET, Heavy Glass, Brushed Aluminum Bottle" },
+      { label: "Dispenser Styles", value: "High-output lotion pump, disc-top cap, aluminum twist-off cap" },
+      { label: "Aromatherapy Blends", value: "Moroccan Orange Blossom, Verbena Citrus, Wild Lavender, Fragrance-Free" },
+      { label: "MOQ", value: "100 units" },
+      { label: "Lead Time", value: "2 to 3 weeks" },
+      { label: "Certificates", value: "COA, Allergen statement, SDS, GMP declaration" },
+    ],
+    applicationsTitle: "Target Channels",
+    applications: [
+      {
+        title: "Luxury Resort & Hotel Spas",
+        body: "Turnkey massage oil for cabana treatments and branded retail boutique shelves.",
+      },
+      {
+        title: "Clean Beauty Body Brands",
+        body: "Expand your line beyond face care into high-margin body elixirs.",
+      },
+      {
+        title: "Bath & Body Gift Collections",
+        body: "Pair with Moroccan black soap and kessa gloves for authentic Hammam home kits.",
+      },
+    ],
+    faqTitle: "Private Label Body & Massage Oil — FAQ",
+    faq: [
+      {
+        question: "Does this oil stain hotel spa linens?",
+        answer:
+          "Our blend uses lightweight cold-pressed carrier lipids that break down easily in standard warm water spa laundry detergents, preventing yellow linen staining.",
+      },
+      {
+        question: "Can we order this in 1-liter or 5-liter backbar jugs for spa use?",
+        answer:
+          "Yes. In addition to retail-ready bottles, we supply spa backbar sizes in 1L, 5L, and 25L bulk jugs.",
+      },
+      {
+        question: "Can this be used on pregnant women for stretch mark prevention?",
+        answer:
+          "Yes, our unscented 100% natural formula is gentle, deeply elasticizing, and completely free of chemical additives, making it popular for maternal belly care.",
+      },
+    ],
+    ctaTitle: "Expand Your Line with Argan Body Care",
+    ctaDescription:
+      "Create your customized spa and body oil line with premium packaging and authentic Moroccan formulations.",
+  },
+  {
+    slug: "usda-organic-argan-oil",
+    chip: "Pure Organic",
+    cardTitle: "USDA Certified Organic Argan Oil",
+    cardSummary:
+      "Certified organic batch oil with full audit traceability back to cooperative harvesting. Meets strict global clean beauty retail standards.",
+    image: "/assets/img/img10.jfif",
+    imageAlt: "USDA certified organic argan oil bottles with gold cap",
+    name: "USDA Certified Organic Argan Oil Private Label",
+    h1: "USDA & ECOCERT Certified Organic Argan Oil Wholesale",
+    lede:
+      "100% certified organic Moroccan argan oil holding dual USDA NOP and ECOCERT Cosmos Organic credentials. Audited from hand-picked wild argan forest groves through cold-mechanical pressing in Agadir. Packaged in premium UV-protective violet or amber glass for top-tier retail compliance.",
+    metaTitle: "USDA Organic Argan Oil Wholesale | ECOCERT Certified Private Label",
+    metaDescription:
+      "USDA Organic & ECOCERT certified pure Moroccan argan oil wholesale. 30ml, 50ml, 100ml violet glass. Full audit traceability. Low MOQ 200 units.",
+    keywords: [
+      "usda organic argan oil wholesale",
+      "ecocert argan oil bulk",
+      "certified organic moroccan argan oil",
+      "organic argan oil private label",
+      "cosmos certified argan oil",
+    ],
+    facts: [
+      { label: "Certifications", value: "USDA NOP, ECOCERT (Cosmos Organic), ISO 22716" },
+      { label: "Traceability", value: "Full batch audit chain to women's cooperative harvest" },
+      { label: "Packaging", value: "30ml, 50ml, 100ml UV-shielding violet / amber glass" },
+      { label: "MOQ", value: "200 units with organic certificate inclusion" },
+    ],
+    overview: {
+      title: "Uncompromising Certified Organic Purity for Strict Global Retailers",
+      paragraphs: [
+        "In competitive retail markets like Sephora, Whole Foods, Douglas, and European organic specialty chains, certification integrity is non-negotiable. Our USDA Certified Organic Argan Oil provides airtight compliance backed by continuous annual audits from ECOCERT and the United States Department of Agriculture (NOP).",
+        "Harvested exclusively from UNESCO-protected argan biospheres in southwestern Morocco, the fruit is collected without synthetic agrochemicals, pesticides, or GMOs. Only cold mechanical pressing is utilized, with complete physical segregation from non-organic raw materials.",
+        "We provide every client with transaction certificates (TC), lot-specific Certificates of Analysis, and all necessary documentation to use certified organic logos on your final retail packaging.",
+      ],
+      quote:
+        "Dual USDA Organic and ECOCERT certified with complete chain of custody from Moroccan cooperative to retail carton.",
+      image: "/assets/img/certified-organic.jpg",
+      imageAlt: "Certified organic argan oil cooperative harvesting in Morocco",
+    },
+    benefitsTitle: "The Certified Organic Advantage",
+    benefitsIntro:
+      "Why certified organic credentials command premium consumer trust and retail shelf placement.",
+    benefits: [
+      {
+        title: "Airtight Regulatory Approval",
+        body: "Instantly compliant for retail distribution across the United States, European Union, UK, Japan, and Canada.",
+      },
+      {
+        title: "100% Agrochemical-Free Purity",
+        body: "Tested for zero detectable organochlorine, organophosphorus, or synthetic pesticide residues.",
+      },
+      {
+        title: "Preserves Maximum Bioactive Nutrients",
+        body: "Strict cold mechanical processing preserves maximum polyphenol, squalene, and sterol levels.",
+      },
+      {
+        title: "Authentic Social & Environmental Impact",
+        body: "Direct cooperative trade empowers indigenous Berber women collectors and protects UNESCO biosphere lands.",
+      },
+    ],
+    processTitle: "Organic Chain of Custody & Extraction",
+    processIntro:
+      "Strict separation, audited harvesting, and zero-chemical pressing protocol.",
+    processImage: "/assets/img/wholesale-argan-oil.jpg",
+    processImageAlt: "USDA organic argan oil production and testing in Agadir",
+    process: [
+      {
+        title: "Certified Forest Harvest",
+        body: "Fruit is gathered exclusively from wild-growing certified organic argan woodlands in the Taroudant and Chtouka regions.",
+      },
+      {
+        title: "Mechanized Organic Cold-Press",
+        body: "Pressed in dedicated organic production lines sanitized with food-grade bio-compatible agents.",
+      },
+      {
+        title: "Purity & Heavy Metal Testing",
+        body: "Independent third-party laboratory analysis verifies fatty acid profile, peroxide index (< 10 meq O2/kg), and zero contaminants.",
+      },
+      {
+        title: "UV-Shielding Violet Glass Packaging",
+        body: "Filled into biophotonic Miron violet or amber glass that filters damaging light frequencies to protect organic antioxidants.",
+      },
+    ],
+    specsTitle: "Technical Data & Compliance Profile",
+    specs: [
+      { label: "Botanical Source", value: "Argania spinosa L. Skeels" },
+      { label: "Organic Credentials", value: "USDA NOP, ECOCERT Organic (EC 834/2007 & Cosmos Standard)" },
+      { label: "Purity", value: "100.0% Single-Ingredient Virgin Organic Argan Oil" },
+      { label: "Packaging Formats", value: "30 ml (1 fl oz), 50 ml (1.7 fl oz), 100 ml (3.4 fl oz) Glass" },
+      { label: "Bottle Protection", value: "Miron deep violet glass or pharmaceutical-grade amber glass" },
+      { label: "Closure", value: "Precision dropper with tamper band or cosmetic serum pump" },
+      { label: "Shelf Life", value: "24 months in unopened UV-protected containers" },
+      { label: "Auditing Documents", value: "Organic Transaction Certificate (TC), Batch COA, MSDS, CPNP/FDA dossier" },
+    ],
+    applicationsTitle: "Target Retail Distribution",
+    applications: [
+      {
+        title: "Clean & Organic Supermarket Chains",
+        body: "Meets strict intake requirements for retailers like Whole Foods Market, Sprouts, and Planet Organic.",
+      },
+      {
+        title: "Luxury Clean Beauty Brands",
+        body: "Formulate or bottle under your name with USDA Organic seal authorization on primary and secondary cartons.",
+      },
+      {
+        title: "Dermatology & Sensitive Skin Clinics",
+        body: "Trusted recommendation for patients recovering from eczema, dermatitis, or sensitive skin reactions.",
+      },
+    ],
+    faqTitle: "USDA Certified Organic Argan Oil — FAQ",
+    faq: [
+      {
+        question: "Can I print the USDA Organic or ECOCERT logo on my brand label?",
+        answer:
+          "Yes. Because our oil is fully certified, we issue the official Organic Transaction Certificate (TC) enabling your brand to display certified organic seals on your compliant packaging.",
+      },
+      {
+        question: "Is this oil unrefined or deodorized?",
+        answer:
+          "Our organic grade is unrefined, virgin cold-pressed to preserve its natural golden hue and authentic delicate aroma without chemical altering.",
+      },
+      {
+        question: "What is the difference between standard cold-pressed and certified organic?",
+        answer:
+          "Standard cold-pressed is pure oil, but certified organic guarantees strict agricultural auditing, complete absence of nearby synthetic fertilizers, and formal third-party regulatory certification.",
+      },
+    ],
+    ctaTitle: "Source Certified Organic Moroccan Argan Oil",
+    ctaDescription:
+      "Request current lot COAs, organic certificates, and customized private label packaging quotes.",
+  },
 ];
 
 export function getProductBySlug(slug: string): Product | undefined {

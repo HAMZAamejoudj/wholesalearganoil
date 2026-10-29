@@ -221,10 +221,10 @@ export default function HomeClient({ locale, dict }: HomeClientProps) {
                     key={product.slug}
                     product={product}
                     delay={`${index * 0.1}s`}
-                    chip={card.chip}
-                    title={card.title}
-                    summary={card.summary}
-                    imageAlt={card.imageAlt}
+                    chip={card?.chip ?? product.chip}
+                    title={card?.title ?? product.cardTitle}
+                    summary={card?.summary ?? product.cardSummary}
+                    imageAlt={card?.imageAlt ?? product.imageAlt}
                     cta={copy.products.viewDetails}
                     locale={locale}
                   />
@@ -233,17 +233,17 @@ export default function HomeClient({ locale, dict }: HomeClientProps) {
             </div>
 
             <div className="supplier__cards" style={{ margin: "0 auto", maxWidth: "760px" }}>
-              {PRODUCTS.slice(3).map((product, index) => {
+              {PRODUCTS.slice(3, 5).map((product, index) => {
                 const card = copy.products.cards[product.slug as keyof typeof copy.products.cards];
                 return (
                   <ProductCard
                     key={product.slug}
                     product={product}
                     delay={`${index * 0.1}s`}
-                    chip={card.chip}
-                    title={card.title}
-                    summary={card.summary}
-                    imageAlt={card.imageAlt}
+                    chip={card?.chip ?? product.chip}
+                    title={card?.title ?? product.cardTitle}
+                    summary={card?.summary ?? product.cardSummary}
+                    imageAlt={card?.imageAlt ?? product.imageAlt}
                     cta={copy.products.viewDetails}
                     locale={locale}
                   />

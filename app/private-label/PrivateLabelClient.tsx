@@ -4,8 +4,17 @@ import { useEffect, useState } from "react";
 import SiteHeader from "../components/SiteHeader";
 import ContactCta from "../components/ContactCta";
 import BulkPopup from "../components/BulkPopup";
-import { HTML_LANG, isRtl, type Locale } from "../i18n/config";
+import { HTML_LANG, isRtl, localePath, type Locale } from "../i18n/config";
 import { en, type Dictionary } from "../i18n/en";
+
+const OPTION_SLUGS = [
+  "pure-moroccan-argan-oil",
+  "argan-hair-treatment-serum",
+  "argan-prickly-pear-face-elixir",
+  "argan-beard-conditioning-oil",
+  "argan-body-massage-oil",
+  "usda-organic-argan-oil",
+];
 
 const OPTION_IMAGES = [
   "/assets/img/argan-oil-private-label-bottle.jpg",
@@ -258,47 +267,79 @@ export default function PrivateLabelClient({
             </div>
 
             <div className="private-page__products-grid">
-              {copy.options.map((product, index) => (
-                <article
-                  key={product.title}
-                  className="product-card reveal"
-                  data-delay={`${index * 0.05}s`}
-                >
-                  <div className="product-card__media">
-                    <img
-                      src={OPTION_IMAGES[index] ?? "/assets/img/cosmetic-argan-bottles.jpg"}
-                      alt={product.title}
-                    />
-                  </div>
-                  <div className="product-card__inner">
-                    <div className="product-card__header">
-                      <span className="private-page__eyebrow">{product.tag}</span>
-                      <h3 className="product-card__title">{product.title}</h3>
+              {copy.options.map((product, index) => {
+                const slug = OPTION_SLUGS[index] || "pure-moroccan-argan-oil";
+                const productHref = localePath(locale, `/products/${slug}`);
+                const viewDetailsLabel =
+                  locale === "fr"
+                    ? "Voir les Détails & Spécifications"
+                    : locale === "es"
+                    ? "Ver Detalles y Especificaciones"
+                    : locale === "ar"
+                    ? "عرض التفاصيل والمواصفات"
+                    : "View Details & Specs";
+
+                const metaLabels = {
+                  sizes: locale === "fr" ? "Formats" : locale === "es" ? "Formatos" : locale === "ar" ? "الأحجام" : "Sizes",
+                  packaging: locale === "fr" ? "Emballage" : locale === "es" ? "Envase" : locale === "ar" ? "التعبئة" : "Packaging",
+                  moq: locale === "fr" ? "MOQ Min" : locale === "es" ? "MOQ Mín" : locale === "ar" ? "الحد الأدنى" : "Min MOQ",
+                  leadTime: locale === "fr" ? "Délai" : locale === "es" ? "Plazo" : locale === "ar" ? "مدة التجهيز" : "Lead Time",
+                };
+
+                return (
+                  <article
+                    key={product.title}
+                    className="product-card reveal"
+                    data-delay={`${index * 0.05}s`}
+                  >
+                    <div className="product-card__media">
+                      <a href={productHref} className="product-card__media-link" aria-label={product.title}>
+                        <img
+                          src={OPTION_IMAGES[index] ?? "/assets/img/cosmetic-argan-bottles.jpg"}
+                          alt={product.title}
+                        />
+                      </a>
                     </div>
-                    <div className="product-card__body">
-                      <p>{product.description}</p>
+                    <div className="product-card__inner">
+                      <div className="product-card__header">
+                        <span className="private-page__eyebrow">{product.tag}</span>
+                        <h3 className="product-card__title">
+                          <a href={productHref} className="product-card__title-link">
+                            {product.title}
+                          </a>
+                        </h3>
+                      </div>
+                      <div className="product-card__body">
+                        <p>{product.description}</p>
+                      </div>
+                      <div className="product-card__meta">
+                        <div className="product-card__meta-item">
+                          <span>{metaLabels.sizes}</span>
+                          <strong>{product.sizes}</strong>
+                        </div>
+                        <div className="product-card__meta-item">
+                          <span>{metaLabels.packaging}</span>
+                          <strong>{product.packaging}</strong>
+                        </div>
+                        <div className="product-card__meta-item">
+                          <span>{metaLabels.moq}</span>
+                          <strong>{product.moq}</strong>
+                        </div>
+                        <div className="product-card__meta-item">
+                          <span>{metaLabels.leadTime}</span>
+                          <strong>{product.leadTime}</strong>
+                        </div>
+                      </div>
+                      <div className="product-card__actions">
+                        <a href={productHref} className="btn btn--primary product-card__btn">
+                          <span>{viewDetailsLabel}</span>
+                          <i className={isRtl(locale) ? "fas fa-arrow-left" : "fas fa-arrow-right"}></i>
+                        </a>
+                      </div>
                     </div>
-                    <div className="product-card__meta">
-                      <div className="product-card__meta-item">
-                        <span>Sizes</span>
-                        <strong>{product.sizes}</strong>
-                      </div>
-                      <div className="product-card__meta-item">
-                        <span>Packaging</span>
-                        <strong>{product.packaging}</strong>
-                      </div>
-                      <div className="product-card__meta-item">
-                        <span>Min MOQ</span>
-                        <strong>{product.moq}</strong>
-                      </div>
-                      <div className="product-card__meta-item">
-                        <span>Lead Time</span>
-                        <strong>{product.leadTime}</strong>
-                      </div>
-                    </div>
-                  </div>
-                </article>
-              ))}
+                  </article>
+                );
+              })}
             </div>
           </div>
         </section>

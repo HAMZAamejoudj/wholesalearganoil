@@ -194,7 +194,7 @@ export const ar: Dictionary = {
     benefits: "الفوائد",
     faq: "الأسئلة",
     contact: "اتصل بنا",
-    cta: "طلب عرض سعر جملة",
+    cta: "طلب عرض أسعار",
     menu: "فتح قائمة التنقل",
     logoAlt: "شعار Wholesale Argan Oil – مورد معتمد من المغرب",
   },

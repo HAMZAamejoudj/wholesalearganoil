@@ -194,7 +194,7 @@ export const fr: Dictionary = {
     benefits: "Bienfaits",
     faq: "FAQ",
     contact: "Contact",
-    cta: "Demander un devis vrac",
+    cta: "Demander un devis",
     menu: "Ouvrir le menu de navigation",
     logoAlt: "Logo Wholesale Argan Oil – fournisseur certifié du Maroc",
   },

@@ -194,7 +194,7 @@ export const es: Dictionary = {
     benefits: "Beneficios",
     faq: "FAQ",
     contact: "Contacto",
-    cta: "Pedir presupuesto granel",
+    cta: "Pedir presupuesto",
     menu: "Abrir el menú de navegación",
     logoAlt: "Logo Wholesale Argan Oil – proveedor certificado de Marruecos",
   },

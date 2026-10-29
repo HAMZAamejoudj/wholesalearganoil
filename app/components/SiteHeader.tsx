@@ -100,67 +100,77 @@ export default function SiteHeader({
               {labels[key]}
             </a>
           ))}
+          <a
+            className="btn btn--primary nav__mobile-cta"
+            href={ctaHref}
+            onClick={closeMenu}
+          >
+            {labels.cta}
+          </a>
         </nav>
 
-        {/* Dropdown Language Switcher */}
-        <div className="lang-dropdown" ref={langDropdownRef}>
+        <div className="nav__actions">
+          {/* Dropdown Language Switcher */}
+          <div className="lang-dropdown" ref={langDropdownRef}>
+            <button
+              type="button"
+              className={`lang-dropdown__btn ${isLangOpen ? "is-open" : ""}`}
+              onClick={() => setIsLangOpen((prev) => !prev)}
+              aria-expanded={isLangOpen}
+              aria-haspopup="true"
+              aria-label="Select language"
+            >
+              <FlagIcon locale={resolvedLocale} className="lang-dropdown__btn-flag" />
+              <span className="lang-dropdown__current">{LOCALE_LABELS[resolvedLocale]}</span>
+              <i
+                className={`fas fa-chevron-down lang-dropdown__arrow ${isLangOpen ? "is-open" : ""}`}
+                aria-hidden="true"
+              ></i>
+            </button>
+
+            {isLangOpen && (
+              <div className="lang-dropdown__menu" role="menu" aria-label="Languages">
+                {LOCALES.map((code) => {
+                  const isActive = code === resolvedLocale;
+                  return (
+                    <a
+                      key={code}
+                      href={localePath(code, cleanPath)}
+                      hrefLang={code}
+                      lang={code}
+                      className={`lang-dropdown__item ${isActive ? "is-active" : ""}`}
+                      role="menuitem"
+                      aria-current={isActive ? "page" : undefined}
+                      onClick={() => setIsLangOpen(false)}
+                    >
+                      <span className="lang-dropdown__item-left">
+                        <FlagIcon locale={code} className="lang-dropdown__flag" />
+                        <span className="lang-dropdown__name">{LOCALE_NAMES[code]}</span>
+                        <span className="lang-dropdown__badge">{LOCALE_LABELS[code]}</span>
+                      </span>
+                      {isActive && (
+                        <i className="fas fa-check lang-dropdown__check" aria-hidden="true"></i>
+                      )}
+                    </a>
+                  );
+                })}
+              </div>
+            )}
+          </div>
+
           <button
-            type="button"
-            className={`lang-dropdown__btn ${isLangOpen ? "is-open" : ""}`}
-            onClick={() => setIsLangOpen((prev) => !prev)}
-            aria-expanded={isLangOpen}
-            aria-haspopup="true"
-            aria-label="Select language"
+            className="nav__menu-btn"
+            id="menuBtn"
+            aria-label={labels.menu}
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
-            <FlagIcon locale={resolvedLocale} className="lang-dropdown__btn-flag" />
-            <span className="lang-dropdown__current">{LOCALE_LABELS[resolvedLocale]}</span>
-            <i
-              className={`fas fa-chevron-down lang-dropdown__arrow ${isLangOpen ? "is-open" : ""}`}
-              aria-hidden="true"
-            ></i>
+            <i className={`fas ${isMenuOpen ? "fa-times" : "fa-bars"}`}></i>
           </button>
 
-          {isLangOpen && (
-            <div className="lang-dropdown__menu" role="menu" aria-label="Languages">
-              {LOCALES.map((code) => {
-                const isActive = code === resolvedLocale;
-                return (
-                  <a
-                    key={code}
-                    href={localePath(code, cleanPath)}
-                    hrefLang={code}
-                    lang={code}
-                    className={`lang-dropdown__item ${isActive ? "is-active" : ""}`}
-                    role="menuitem"
-                    aria-current={isActive ? "page" : undefined}
-                    onClick={() => setIsLangOpen(false)}
-                  >
-                    <span className="lang-dropdown__item-left">
-                      <FlagIcon locale={code} className="lang-dropdown__flag" />
-                      <span className="lang-dropdown__name">{LOCALE_NAMES[code]}</span>
-                      <span className="lang-dropdown__badge">{LOCALE_LABELS[code]}</span>
-                    </span>
-                    {isActive && (
-                      <i className="fas fa-check lang-dropdown__check" aria-hidden="true"></i>
-                    )}
-                  </a>
-                );
-              })}
-            </div>
-          )}
+          <a className="btn btn--pill nav__cta" href={ctaHref}>
+            {labels.cta}
+          </a>
         </div>
-
-        <button
-          className="nav__menu-btn"
-          id="menuBtn"
-          aria-label={labels.menu}
-          onClick={() => setIsMenuOpen(!isMenuOpen)}
-        >
-          <i className={`fas ${isMenuOpen ? "fa-times" : "fa-bars"}`}></i>
-        </button>
-        <a className="btn btn--pill" href={ctaHref}>
-          {labels.cta}
-        </a>
       </div>
     </header>
   );

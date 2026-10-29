@@ -320,7 +320,7 @@ export const fr: Dictionary = {
       eyebrow: "Logistique mondiale et SKU marque blanche",
       h2: "Vrac d'huile d'argan et export marque blanche",
       lede: "Wholesale départ usine à Agadir pour les USA, l'UE, le CCG et le monde. Devis EXW, FOB Agadir, CIF et DDP avec COA, FDS/MSDS et papiers d'origine à chaque lot.",
-      imageAlt: "Palettes et fûts d'huile d'argan marocaine prêts pour l'export",
+      imageAlt: "Gamme cosmétique bio marocaine et produits à l'huile d'argan en marque blanche prêts à l'export",
       badge: "Prêt à l'export",
       h3: "Programmes d'approvisionnement B2B",
       intro: "Que vous développiez une marque établie ou lanciez une ligne bio, nous accompagnons votre croissance avec :",

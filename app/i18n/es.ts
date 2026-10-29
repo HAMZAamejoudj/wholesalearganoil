@@ -320,7 +320,7 @@ export const es: Dictionary = {
       eyebrow: "Logística global y SKU marca blanca",
       h2: "Suministro a granel y exportación en marca blanca",
       lede: "Wholesale directo de fábrica en Agadir para EE. UU., UE, CCG y todo el mundo. Cotizamos EXW, FOB Agadir, CIF y DDP con COA, FDS/MSDS y documentos de origen en cada partida.",
-      imageAlt: "Palés y bidones de aceite de argán marroquí listos para exportar",
+      imageAlt: "Línea cosmética ecológica marroquí y productos de aceite de argán marca blanca listos para exportar",
       badge: "Listo para exportar",
       h3: "Programas de suministro B2B a medida",
       intro: "Tanto si consolida una marca existente como si lanza una nueva línea bio, respaldamos su crecimiento con:",

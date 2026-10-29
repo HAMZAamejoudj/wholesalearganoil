@@ -295,7 +295,7 @@ export default function HomeClient({ locale, dict }: HomeClientProps) {
                 <div className="solutions__media-glow" aria-hidden="true"></div>
                 <div className="solutions__media-frame">
                   <img
-                    src="/assets/img/pallet-export.jpg"
+                    src="/assets/img/b2b-products-line.jpg"
                     alt={copy.solutions.imageAlt}
                     className="solutions__image"
                   />

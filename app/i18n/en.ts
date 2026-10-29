@@ -320,7 +320,7 @@ export const en = {
       eyebrow: "Global Logistics and Private Label SKU",
       h2: "Bulk Argan Oil Supply and Private Label Export",
       lede: "Factory-direct wholesale from Agadir for USA, EU, GCC and worldwide buyers. We quote EXW, FOB Agadir, CIF and DDP with COA, SDS/MSDS and origin papers on every lot.",
-      imageAlt: "Wholesale Moroccan Argan Oil Pallets and Drums Ready for Global Export",
+      imageAlt: "Moroccan Organic Cosmetic Line and Private Label Argan Oil Products Ready for Export",
       badge: "Export Ready",
       h3: "Customized B2B Supply Programs",
       intro: "Whether you're scaling an established brand or launching a new organic cosmetic line, we support your growth with:",

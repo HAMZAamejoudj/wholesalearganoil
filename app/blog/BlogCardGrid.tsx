@@ -14,27 +14,39 @@ export default function BlogCardGrid({
 }: BlogCardGridProps) {
   return (
     <div className="blog-page__cards-grid">
-      {cards.map((card) => (
-        <a
-          key={card.slug}
-          href={localePath(locale, `/blog/${card.slug}`)}
-          className="blog-card-link"
-        >
-          <article className="blog-card">
-            <div className="blog-card__media">
-              <img src={card.image} alt={card.imageAlt} />
-            </div>
+      {cards.map((card) => {
+        const postHref = localePath(locale, `/blog/${card.slug}`);
+        return (
+          <article key={card.slug} className="blog-card">
+            <a
+              href={postHref}
+              className="blog-card__media-link"
+              tabIndex={-1}
+              aria-label={card.cardTitle}
+            >
+              <div className="blog-card__media">
+                <img src={card.image} alt={card.imageAlt} />
+              </div>
+            </a>
             <div className="blog-card__inner">
               <span className="blog-card__tag">{card.tag}</span>
-              <h2 className="blog-card__title">{card.cardTitle}</h2>
+              <h2 className="blog-card__title">
+                <a href={postHref} className="blog-card__title-link">
+                  {card.cardTitle}
+                </a>
+              </h2>
               <p className="blog-card__body">{card.cardSummary}</p>
-              <span className="blog-card__cta">
+              <a
+                href={postHref}
+                className="blog-card__cta"
+                aria-label={`${cta}: ${card.cardTitle}`}
+              >
                 {cta} <i className="fas fa-arrow-right"></i>
-              </span>
+              </a>
             </div>
           </article>
-        </a>
-      ))}
+        );
+      })}
     </div>
   );
 }

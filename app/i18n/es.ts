@@ -5,7 +5,7 @@ export const es: Dictionary = {
     // Backward compatibility for HomeClient
     title: "Aceite de Argán al Por Mayor | Granel y Marca Blanca | Marruecos",
     description:
-      "Compre aceite de argán marroquí ecológico al por mayor. Aceite prensado en frío a granel y marca blanca desde Agadir. ECOCERT, USDA Organic, COA en cada lote. MOQ desde 5 litros. Envío a EE. UU., UE y todo el mundo.",
+      "Aceite de argán marroquí bio al por mayor. Granel y marca blanca desde Agadir. Certificado ECOCERT, USDA Organic y COA. Exportación mundial.",
     keywords: [
       "aceite de argán al por mayor",
       "aceite de argán a granel",
@@ -28,7 +28,7 @@ export const es: Dictionary = {
     home: {
       title: "Aceite de Argán al Por Mayor | Granel y Marca Blanca | Marruecos",
       description:
-        "Compre aceite de argán marroquí ecológico al por mayor. Aceite prensado en frío a granel y marca blanca desde Agadir. ECOCERT, USDA Organic, COA en cada lote. MOQ desde 5 litros. Envío a EE. UU., UE y todo el mundo.",
+        "Aceite de argán marroquí bio al por mayor. Granel y marca blanca desde Agadir. Certificado ECOCERT, USDA Organic y COA. Exportación mundial.",
       keywords: [
         "aceite de argán al por mayor",
         "aceite de argán a granel",

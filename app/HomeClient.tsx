@@ -1,9 +1,10 @@
 "use client";
 
-import { useEffect, useState, useRef } from "react";
+import { useEffect, useState } from "react";
 import JsonLd from "./components/JsonLd";
 import ProductCard from "./components/ProductCard";
 import SiteHeader from "./components/SiteHeader";
+import BulkPopup from "./components/BulkPopup";
 import { HTML_LANG, SCHEMA_LANG, isRtl, localePath, type Locale } from "./i18n/config";
 import type { Dictionary } from "./i18n/en";
 import { PRODUCTS } from "./lib/products";
@@ -24,9 +25,6 @@ export default function HomeClient({ locale, dict }: HomeClientProps) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [showScrollTop, setShowScrollTop] = useState(false);
-  const [isPopupVisible, setIsPopupVisible] = useState(false);
-  const popupTimerRef = useRef<NodeJS.Timeout | null>(null);
-  const autoCloseTimerRef = useRef<NodeJS.Timeout | null>(null);
   const copy = dict.home;
   const homePath = localePath(locale);
 
@@ -56,41 +54,6 @@ export default function HomeClient({ locale, dict }: HomeClientProps) {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
-
-  useEffect(() => {
-    popupTimerRef.current = setTimeout(() => {
-      setIsPopupVisible(true);
-    }, 2500);
-
-    const handleKeyDown = (event: KeyboardEvent) => {
-      if (event.key === "Escape") {
-        closePopup();
-      }
-    };
-
-    document.addEventListener("keydown", handleKeyDown);
-
-    return () => {
-      if (popupTimerRef.current) clearTimeout(popupTimerRef.current);
-      if (autoCloseTimerRef.current) clearTimeout(autoCloseTimerRef.current);
-      document.removeEventListener("keydown", handleKeyDown);
-    };
-  }, []);
-
-  useEffect(() => {
-    if (isPopupVisible) {
-      if (autoCloseTimerRef.current) clearTimeout(autoCloseTimerRef.current);
-      autoCloseTimerRef.current = setTimeout(() => {
-        setIsPopupVisible(false);
-      }, 7000);
-    }
-  }, [isPopupVisible]);
-
-  const closePopup = () => {
-    setIsPopupVisible(false);
-    if (popupTimerRef.current) clearTimeout(popupTimerRef.current);
-    if (autoCloseTimerRef.current) clearTimeout(autoCloseTimerRef.current);
-  };
 
   useEffect(() => {
     const revealItems = document.querySelectorAll(".reveal");
@@ -388,7 +351,7 @@ export default function HomeClient({ locale, dict }: HomeClientProps) {
                       <i className={`fas ${processIcons[index]}`}></i>
                     </div>
                   </div>
-                  <h4>{step.title}</h4>
+                  <strong className="process__card-title">{step.title}</strong>
                   <p>{step.body}</p>
                 </article>
               ))}
@@ -425,7 +388,9 @@ export default function HomeClient({ locale, dict }: HomeClientProps) {
                     <i className={`fas ${certIcons[index]}`}></i>
                   </div>
                   <div>
-                    <h4>{item.title}</h4>
+                    <strong style={{ display: "block", color: "var(--ink)", marginBottom: "0.25rem", fontSize: "1.02rem" }}>
+                      {item.title}
+                    </strong>
                     <p style={{ fontSize: "0.88rem" }}>{item.body}</p>
                   </div>
                 </div>
@@ -495,15 +460,15 @@ export default function HomeClient({ locale, dict }: HomeClientProps) {
                     gap: "0.8rem",
                   }}
                 >
-                  <p>
-                    <strong>{copy.contact.pitch}</strong>
-                  </p>
+                  <p style={{ fontWeight: 600, color: "var(--ink)" }}>{copy.contact.pitch}</p>
                   <p style={{ fontSize: "0.92rem", color: "var(--muted)" }}>{copy.contact.terms}</p>
                 </div>
               </div>
 
               <div className="about__card reveal" data-delay="0.15s" style={{ alignSelf: "stretch" }}>
-                <h3 style={{ textShadow: "none", color: "var(--ink)" }}>{copy.contact.formTitle}</h3>
+                <p style={{ textShadow: "none", color: "var(--ink)", fontWeight: 700, fontSize: "1.25rem", margin: "0 0 0.5rem" }}>
+                  {copy.contact.formTitle}
+                </p>
                 <p style={{ textAlign: "center" }}>{copy.contact.formLede}</p>
                 <div
                   className="contact__details"
@@ -571,7 +536,7 @@ export default function HomeClient({ locale, dict }: HomeClientProps) {
             </div>
           </div>
           <div>
-            <h4>{copy.footer.payment}</h4>
+            <p className="footer__col-title">{copy.footer.payment}</p>
             <div
               style={{
                 background: "rgba(15, 27, 44, 0.55)",
@@ -589,7 +554,7 @@ export default function HomeClient({ locale, dict }: HomeClientProps) {
             </div>
           </div>
           <div>
-            <h4>{copy.footer.logistics}</h4>
+            <p className="footer__col-title">{copy.footer.logistics}</p>
             <div
               style={{
                 background: "rgba(15, 27, 44, 0.55)",
@@ -607,7 +572,7 @@ export default function HomeClient({ locale, dict }: HomeClientProps) {
             </div>
           </div>
           <div>
-            <h4>{copy.footer.contact}</h4>
+            <p className="footer__col-title">{copy.footer.contact}</p>
             <ul className="footer__contact">
               <li>
                 <i className="fas fa-map-marker-alt"></i> {copy.footer.address}
@@ -638,39 +603,7 @@ export default function HomeClient({ locale, dict }: HomeClientProps) {
         <i className="fas fa-arrow-up"></i>
       </button>
 
-      <div
-        className={`bulk-popup ${isPopupVisible ? "is-visible" : ""}`}
-        id="bulkPopup"
-        aria-hidden={!isPopupVisible}
-        style={{ display: isPopupVisible ? "flex" : "none" }}
-      >
-        <div className="bulk-popup__overlay" id="bulkPopupOverlay" onClick={closePopup}></div>
-        <div className="bulk-popup__card" role="dialog" aria-labelledby="bulkPopupTitle">
-          <button
-            className="bulk-popup__close"
-            id="bulkPopupClose"
-            aria-label={copy.popup.close}
-            onClick={closePopup}
-          >
-            <i className="fas fa-times"></i>
-          </button>
-          <span className="bulk-popup__eyebrow">{copy.popup.eyebrow}</span>
-          <h3 id="bulkPopupTitle">{copy.popup.title}</h3>
-          <p className="bulk-popup__lede">{copy.popup.lede}</p>
-          <div className="bulk-popup__media">
-            <img src="/assets/img/wholesale-argan-oil.jpg" alt={copy.popup.imageAlt} />
-          </div>
-          <p className="bulk-popup__body">{copy.popup.body}</p>
-          <a
-            className="btn btn--primary bulk-popup__cta"
-            href="https://wa.me/212641517831"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <i className="fab fa-whatsapp"></i> {copy.popup.cta}
-          </a>
-        </div>
-      </div>
+      <BulkPopup popupCopy={copy.popup} />
     </>
   );
 }

@@ -5,7 +5,7 @@ export const fr: Dictionary = {
     // Backward compatibility for HomeClient
     title: "Huile d'Argan en Gros | Vrac & Marque Blanche | Maroc",
     description:
-      "Achetez de l'huile d'argan marocaine bio en gros. Huile pressée à froid, vrac et marque blanche depuis Agadir. ECOCERT, USDA Organic, COA à chaque lot. MOQ dès 5 litres. Livraison USA, UE et monde.",
+      "Huile d'argan bio marocaine en gros. Fûts en vrac & marque blanche depuis Agadir. Certifiée ECOCERT & USDA Organic avec COA. Expédition mondiale.",
     keywords: [
       "huile d'argan en gros",
       "huile d'argan vrac",
@@ -28,7 +28,7 @@ export const fr: Dictionary = {
     home: {
       title: "Huile d'Argan en Gros | Vrac & Marque Blanche | Maroc",
       description:
-        "Achetez de l'huile d'argan marocaine bio en gros. Huile pressée à froid, vrac et marque blanche depuis Agadir. ECOCERT, USDA Organic, COA à chaque lot. MOQ dès 5 litres. Livraison USA, UE et monde.",
+        "Huile d'argan bio marocaine en gros. Fûts en vrac & marque blanche depuis Agadir. Certifiée ECOCERT & USDA Organic avec COA. Expédition mondiale.",
       keywords: [
         "huile d'argan en gros",
         "huile d'argan vrac",

@@ -25,20 +25,34 @@ export default function ProductCard({
   locale = "en",
 }: ProductCardProps) {
   const targetHref = href ?? localePath(locale, `/products/${product.slug}`);
+  const cardTitle = title ?? product.cardTitle;
 
   return (
-    <a href={targetHref} className="grade-card-link">
-      <article className="grade-card reveal" data-delay={delay}>
+    <article className="grade-card reveal" data-delay={delay}>
+      <a
+        href={targetHref}
+        className="grade-card__img-link"
+        aria-label={cardTitle}
+        tabIndex={-1}
+      >
         <img src={product.image} alt={imageAlt ?? product.imageAlt} />
-        <div className="grade-card__body">
-          <span className="chip">{chip ?? product.chip}</span>
-          <h3>{title ?? product.cardTitle}</h3>
-          <p>{summary ?? product.cardSummary}</p>
-          <span className="grade-card__cta">
-            {cta} <i className="fas fa-arrow-right"></i>
-          </span>
-        </div>
-      </article>
-    </a>
+      </a>
+      <div className="grade-card__body">
+        <span className="chip">{chip ?? product.chip}</span>
+        <h3>
+          <a href={targetHref} className="grade-card__title-link">
+            {cardTitle}
+          </a>
+        </h3>
+        <p>{summary ?? product.cardSummary}</p>
+        <a
+          href={targetHref}
+          className="grade-card__cta"
+          aria-label={`${cta}: ${cardTitle}`}
+        >
+          {cta} <i className="fas fa-arrow-right"></i>
+        </a>
+      </div>
+    </article>
   );
 }

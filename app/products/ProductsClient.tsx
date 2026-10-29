@@ -1,9 +1,10 @@
 "use client";
 
-import { useEffect, useState, useRef } from "react";
+import { useEffect, useState } from "react";
 import SiteHeader from "../components/SiteHeader";
 import ProductCard from "../components/ProductCard";
 import ContactCta from "../components/ContactCta";
+import BulkPopup from "../components/BulkPopup";
 import { PRODUCTS } from "../lib/products";
 import { HTML_LANG, isRtl, localePath, type Locale } from "../i18n/config";
 import { en, type Dictionary } from "../i18n/en";
@@ -20,16 +21,11 @@ export default function ProductsClient({
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [showScrollTop, setShowScrollTop] = useState(false);
-  const [isPopupVisible, setIsPopupVisible] = useState(false);
 
   const copy = dict.products;
   const footerCopy = dict.home.footer;
   const popupCopy = dict.home.popup;
   const ctaCopy = dict.contactCta;
-
-  // Timers for popup
-  const popupTimerRef = useRef<NodeJS.Timeout | null>(null);
-  const autoCloseTimerRef = useRef<NodeJS.Timeout | null>(null);
 
   useEffect(() => {
     const html = document.documentElement;
@@ -58,42 +54,6 @@ export default function ProductsClient({
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
-
-  // Popup logic
-  useEffect(() => {
-    popupTimerRef.current = setTimeout(() => {
-      setIsPopupVisible(true);
-    }, 4500);
-
-    const handleKeyDown = (event: KeyboardEvent) => {
-      if (event.key === "Escape") {
-        closePopup();
-      }
-    };
-
-    document.addEventListener("keydown", handleKeyDown);
-
-    return () => {
-      if (popupTimerRef.current) clearTimeout(popupTimerRef.current);
-      if (autoCloseTimerRef.current) clearTimeout(autoCloseTimerRef.current);
-      document.removeEventListener("keydown", handleKeyDown);
-    };
-  }, []);
-
-  useEffect(() => {
-    if (isPopupVisible) {
-      if (autoCloseTimerRef.current) clearTimeout(autoCloseTimerRef.current);
-      autoCloseTimerRef.current = setTimeout(() => {
-        setIsPopupVisible(false);
-      }, 7000);
-    }
-  }, [isPopupVisible]);
-
-  const closePopup = () => {
-    setIsPopupVisible(false);
-    if (popupTimerRef.current) clearTimeout(popupTimerRef.current);
-    if (autoCloseTimerRef.current) clearTimeout(autoCloseTimerRef.current);
-  };
 
   // Scroll reveal Intersection Observer
   useEffect(() => {
@@ -223,7 +183,7 @@ export default function ProductsClient({
             </div>
           </div>
           <div>
-            <h4>{footerCopy.payment}</h4>
+            <p className="footer__col-title">{footerCopy.payment}</p>
             <div
               style={{
                 background: "rgba(15, 27, 44, 0.55)",
@@ -241,7 +201,7 @@ export default function ProductsClient({
             </div>
           </div>
           <div>
-            <h4>{footerCopy.logistics}</h4>
+            <p className="footer__col-title">{footerCopy.logistics}</p>
             <div
               style={{
                 background: "rgba(15, 27, 44, 0.55)",
@@ -259,7 +219,7 @@ export default function ProductsClient({
             </div>
           </div>
           <div>
-            <h4>{footerCopy.contact}</h4>
+            <p className="footer__col-title">{footerCopy.contact}</p>
             <ul className="footer__contact">
               <li>
                 <i className="fas fa-map-marker-alt"></i> {footerCopy.address}
@@ -288,39 +248,7 @@ export default function ProductsClient({
         <i className="fas fa-arrow-up"></i>
       </button>
 
-      <div
-        className={`bulk-popup ${isPopupVisible ? "is-visible" : ""}`}
-        id="bulkPopup"
-        aria-hidden={!isPopupVisible}
-        style={{ display: isPopupVisible ? "flex" : "none" }}
-      >
-        <div className="bulk-popup__overlay" id="bulkPopupOverlay" onClick={closePopup}></div>
-        <div className="bulk-popup__card" role="dialog" aria-labelledby="bulkPopupTitle">
-          <button
-            className="bulk-popup__close"
-            id="bulkPopupClose"
-            aria-label={popupCopy.close}
-            onClick={closePopup}
-          >
-            <i className="fas fa-times"></i>
-          </button>
-          <span className="bulk-popup__eyebrow">{popupCopy.eyebrow}</span>
-          <h3 id="bulkPopupTitle">{popupCopy.title}</h3>
-          <p className="bulk-popup__lede">{popupCopy.lede}</p>
-          <div className="bulk-popup__media">
-            <img src="/assets/img/wholesale-argan-oil.jpg" alt={popupCopy.imageAlt} />
-          </div>
-          <p className="bulk-popup__body">{popupCopy.body}</p>
-          <a
-            className="btn btn--primary bulk-popup__cta"
-            href="https://wa.me/212641517831"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <i className="fab fa-whatsapp"></i> {popupCopy.cta}
-          </a>
-        </div>
-      </div>
+      <BulkPopup popupCopy={popupCopy} />
     </>
   );
 }

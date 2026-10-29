@@ -3,7 +3,7 @@ export const en = {
     // Backward compatibility for HomeClient
     title: "Argan Oil Wholesale | Bulk & Private Label | Morocco",
     description:
-      "Buy certified organic Moroccan argan oil wholesale. Cold-pressed bulk oil and private label from Agadir. ECOCERT, USDA Organic, COA every batch. MOQ from 5 liters. Ship USA, EU & worldwide.",
+      "Buy certified organic Moroccan argan oil wholesale. Cold-pressed bulk oil & private label from Agadir. ECOCERT, USDA Organic, COA. Worldwide export.",
     keywords: [
       "argan oil wholesale",
       "bulk argan oil",
@@ -27,7 +27,7 @@ export const en = {
     home: {
       title: "Argan Oil Wholesale | Bulk & Private Label | Morocco",
       description:
-        "Buy certified organic Moroccan argan oil wholesale. Cold-pressed bulk oil and private label from Agadir. ECOCERT, USDA Organic, COA every batch. MOQ from 5 liters. Ship USA, EU & worldwide.",
+        "Buy certified organic Moroccan argan oil wholesale. Cold-pressed bulk oil & private label from Agadir. ECOCERT, USDA Organic, COA. Worldwide export.",
       keywords: [
         "argan oil wholesale",
         "bulk argan oil",

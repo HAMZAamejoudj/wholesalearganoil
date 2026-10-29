@@ -1,8 +1,9 @@
 "use client";
 
-import { useEffect, useState, useRef } from "react";
+import { useEffect, useState } from "react";
 import SiteHeader from "../components/SiteHeader";
 import ContactCta from "../components/ContactCta";
+import BulkPopup from "../components/BulkPopup";
 import "./faq.css";
 import { HTML_LANG, isRtl, type Locale } from "../i18n/config";
 import { en, type Dictionary } from "../i18n/en";
@@ -22,6 +23,36 @@ const FAQ_CATEGORIES: ("shipping" | "quality" | "private")[] = [
   "shipping",
 ];
 
+const SEARCH_PLACEHOLDER: Record<Locale, string> = {
+  en: "Search questions or keywords...",
+  fr: "Rechercher des questions ou mots-clés...",
+  es: "Buscar preguntas o palabras clave...",
+  ar: "ابحث في الأسئلة الشائعة أو الكلمات الدلالية...",
+};
+
+const SUPPORT_COPY: Record<Locale, { title: string; desc: string; cta: string }> = {
+  en: {
+    title: "Still have questions about ordering in bulk?",
+    desc: "Our export specialists in Agadir are available on WhatsApp to assist with specs, COA, and custom quotes.",
+    cta: "Chat on WhatsApp",
+  },
+  fr: {
+    title: "Vous avez d'autres questions sur la commande en gros ?",
+    desc: "Nos spécialistes à Agadir sont disponibles sur WhatsApp pour vous fournir les analyses COA et un devis sur-mesure.",
+    cta: "Discuter sur WhatsApp",
+  },
+  es: {
+    title: "¿Tienes más preguntas sobre pedidos al por mayor?",
+    desc: "Nuestros especialistas en Agadir están disponibles en WhatsApp para especificaciones, COA y cotizaciones.",
+    cta: "Chatear en WhatsApp",
+  },
+  ar: {
+    title: "هل لديك استفسارات إضافية حول طلبيات الجملة؟",
+    desc: "فريق التصدير في أكادير جاهز للتواصل الفوري عبر واتساب لتزويدك بشهادات التحليل COA وعروض الأسعار المخصصة.",
+    cta: "تواصل عبر واتساب",
+  },
+};
+
 export default function FaqClient({
   locale = "en",
   dict = en,
@@ -29,7 +60,6 @@ export default function FaqClient({
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [showScrollTop, setShowScrollTop] = useState(false);
-  const [isPopupVisible, setIsPopupVisible] = useState(false);
   const [openIndexes, setOpenIndexes] = useState<number[]>([0, 1]);
   const [activeCategory, setActiveCategory] = useState<string>("all");
   const [searchQuery, setSearchQuery] = useState("");
@@ -38,9 +68,7 @@ export default function FaqClient({
   const footerCopy = dict.home.footer;
   const popupCopy = dict.home.popup;
   const ctaCopy = dict.contactCta;
-
-  const popupTimerRef = useRef<NodeJS.Timeout | null>(null);
-  const autoCloseTimerRef = useRef<NodeJS.Timeout | null>(null);
+  const support = SUPPORT_COPY[locale] ?? SUPPORT_COPY.en;
 
   useEffect(() => {
     const html = document.documentElement;
@@ -68,41 +96,6 @@ export default function FaqClient({
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
-
-  useEffect(() => {
-    popupTimerRef.current = setTimeout(() => {
-      setIsPopupVisible(true);
-    }, 4500);
-
-    const handleKeyDown = (event: KeyboardEvent) => {
-      if (event.key === "Escape") {
-        closePopup();
-      }
-    };
-
-    document.addEventListener("keydown", handleKeyDown);
-
-    return () => {
-      if (popupTimerRef.current) clearTimeout(popupTimerRef.current);
-      if (autoCloseTimerRef.current) clearTimeout(autoCloseTimerRef.current);
-      document.removeEventListener("keydown", handleKeyDown);
-    };
-  }, []);
-
-  useEffect(() => {
-    if (isPopupVisible) {
-      if (autoCloseTimerRef.current) clearTimeout(autoCloseTimerRef.current);
-      autoCloseTimerRef.current = setTimeout(() => {
-        setIsPopupVisible(false);
-      }, 7000);
-    }
-  }, [isPopupVisible]);
-
-  const closePopup = () => {
-    setIsPopupVisible(false);
-    if (popupTimerRef.current) clearTimeout(popupTimerRef.current);
-    if (autoCloseTimerRef.current) clearTimeout(autoCloseTimerRef.current);
-  };
 
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
@@ -145,42 +138,69 @@ export default function FaqClient({
       <main className="faq-page">
         <section className="faq-page__hero">
           <div className="container faq-page__hero-content">
-            <span className="benefits-page__eyebrow">{copy.hero.eyebrow}</span>
+            <span className="eyebrow" style={{ color: "var(--sun-gold)" }}>{copy.hero.eyebrow}</span>
             <h1>{copy.hero.h1}</h1>
             <p className="faq-page__hero-lede">{copy.hero.lede}</p>
+
+            {/* Live Search Bar */}
+            <div className="faq-search">
+              <i className="fas fa-search faq-search__icon" aria-hidden="true"></i>
+              <input
+                type="text"
+                className="faq-search__input"
+                placeholder={SEARCH_PLACEHOLDER[locale] ?? SEARCH_PLACEHOLDER.en}
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                aria-label="Search FAQ"
+              />
+              {searchQuery && (
+                <button
+                  type="button"
+                  className="faq-search__clear"
+                  onClick={() => setSearchQuery("")}
+                  aria-label="Clear search"
+                >
+                  <i className="fas fa-times"></i>
+                </button>
+              )}
+            </div>
           </div>
         </section>
 
         <section className="faq-page__content-wrap">
           <div className="container faq-page__layout">
-            <div className="faq-controls" style={{ marginBottom: "2rem" }}>
-              <div className="faq-filters" style={{ display: "flex", gap: "0.5rem", flexWrap: "wrap" }}>
+            <div className="faq-controls">
+              <div className="faq-filters" role="tablist" aria-label="FAQ Categories">
                 <button
                   type="button"
-                  className={`btn ${activeCategory === "all" ? "btn--primary" : "btn--ghost"}`}
+                  className={`faq-filter-btn ${activeCategory === "all" ? "is-active" : ""}`}
                   onClick={() => setActiveCategory("all")}
                 >
+                  <i className="fas fa-th-large" aria-hidden="true"></i>
                   {copy.categories.all}
                 </button>
                 <button
                   type="button"
-                  className={`btn ${activeCategory === "quality" ? "btn--primary" : "btn--ghost"}`}
+                  className={`faq-filter-btn ${activeCategory === "quality" ? "is-active" : ""}`}
                   onClick={() => setActiveCategory("quality")}
                 >
+                  <i className="fas fa-award" aria-hidden="true"></i>
                   {copy.categories.quality}
                 </button>
                 <button
                   type="button"
-                  className={`btn ${activeCategory === "private" ? "btn--primary" : "btn--ghost"}`}
+                  className={`faq-filter-btn ${activeCategory === "private" ? "is-active" : ""}`}
                   onClick={() => setActiveCategory("private")}
                 >
+                  <i className="fas fa-tags" aria-hidden="true"></i>
                   {copy.categories.private}
                 </button>
                 <button
                   type="button"
-                  className={`btn ${activeCategory === "shipping" ? "btn--primary" : "btn--ghost"}`}
+                  className={`faq-filter-btn ${activeCategory === "shipping" ? "is-active" : ""}`}
                   onClick={() => setActiveCategory("shipping")}
                 >
+                  <i className="fas fa-plane-departure" aria-hidden="true"></i>
                   {copy.categories.shipping}
                 </button>
               </div>
@@ -196,6 +216,7 @@ export default function FaqClient({
                       className={`faq-item ${isOpen ? "is-open" : ""}`}
                     >
                       <button
+                        type="button"
                         className="faq-item__btn"
                         onClick={() => toggleAccordion(faq.originalIndex)}
                         aria-expanded={isOpen}
@@ -216,9 +237,50 @@ export default function FaqClient({
               </div>
             ) : (
               <div className="faq-empty">
-                <p>No questions matched your search criteria.</p>
+                <i className="fas fa-question-circle" aria-hidden="true"></i>
+                <p>
+                  {locale === "ar"
+                    ? "لم يتم العثور على أي سؤال يطابق بحثك."
+                    : locale === "fr"
+                    ? "Aucune question ne correspond à votre recherche."
+                    : locale === "es"
+                    ? "No se encontraron preguntas que coincidan con su búsqueda."
+                    : "No questions matched your search criteria."}
+                </p>
+                <button
+                  type="button"
+                  className="btn btn--ghost"
+                  onClick={() => {
+                    setSearchQuery("");
+                    setActiveCategory("all");
+                  }}
+                >
+                  {locale === "ar"
+                    ? "إعادة ضبط البحث"
+                    : locale === "fr"
+                    ? "Réinitialiser la recherche"
+                    : locale === "es"
+                    ? "Restablecer búsqueda"
+                    : "Reset filters"}
+                </button>
               </div>
             )}
+
+            {/* Direct WhatsApp Support Box */}
+            <div className="faq-support-box">
+              <div className="faq-support-box__content">
+                <strong className="faq-support-box__title">{support.title}</strong>
+                <p>{support.desc}</p>
+              </div>
+              <a
+                href="https://wa.me/212641517831?text=Hello%20Wholesale%20Argan%20Oil%2C%20I%20have%20a%20question%20about%20ordering."
+                target="_blank"
+                rel="noreferrer"
+                className="faq-support-box__cta"
+              >
+                <i className="fab fa-whatsapp"></i> {support.cta}
+              </a>
+            </div>
           </div>
         </section>
 
@@ -257,7 +319,7 @@ export default function FaqClient({
             </div>
           </div>
           <div>
-            <h4>{footerCopy.payment}</h4>
+            <p className="footer__col-title">{footerCopy.payment}</p>
             <div
               style={{
                 background: "rgba(15, 27, 44, 0.55)",
@@ -275,7 +337,7 @@ export default function FaqClient({
             </div>
           </div>
           <div>
-            <h4>{footerCopy.logistics}</h4>
+            <p className="footer__col-title">{footerCopy.logistics}</p>
             <div
               style={{
                 background: "rgba(15, 27, 44, 0.55)",
@@ -293,7 +355,7 @@ export default function FaqClient({
             </div>
           </div>
           <div>
-            <h4>{footerCopy.contact}</h4>
+            <p className="footer__col-title">{footerCopy.contact}</p>
             <ul className="footer__contact">
               <li>
                 <i className="fas fa-map-marker-alt"></i> {footerCopy.address}
@@ -322,39 +384,7 @@ export default function FaqClient({
         <i className="fas fa-arrow-up"></i>
       </button>
 
-      <div
-        className={`bulk-popup ${isPopupVisible ? "is-visible" : ""}`}
-        id="bulkPopup"
-        aria-hidden={!isPopupVisible}
-        style={{ display: isPopupVisible ? "flex" : "none" }}
-      >
-        <div className="bulk-popup__overlay" id="bulkPopupOverlay" onClick={closePopup}></div>
-        <div className="bulk-popup__card" role="dialog" aria-labelledby="bulkPopupTitle">
-          <button
-            className="bulk-popup__close"
-            id="bulkPopupClose"
-            aria-label={popupCopy.close}
-            onClick={closePopup}
-          >
-            <i className="fas fa-times"></i>
-          </button>
-          <span className="bulk-popup__eyebrow">{popupCopy.eyebrow}</span>
-          <h3 id="bulkPopupTitle">{popupCopy.title}</h3>
-          <p className="bulk-popup__lede">{popupCopy.lede}</p>
-          <div className="bulk-popup__media">
-            <img src="/assets/img/wholesale-argan-oil.jpg" alt={popupCopy.imageAlt} />
-          </div>
-          <p className="bulk-popup__body">{popupCopy.body}</p>
-          <a
-            className="btn btn--primary bulk-popup__cta"
-            href="https://wa.me/212641517831"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <i className="fab fa-whatsapp"></i> {popupCopy.cta}
-          </a>
-        </div>
-      </div>
+      <BulkPopup popupCopy={popupCopy} />
     </>
   );
 }

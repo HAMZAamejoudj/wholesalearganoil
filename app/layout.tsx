@@ -24,7 +24,16 @@ const manrope = Manrope({
 
 export const metadata: Metadata = {
   title: "Argan Oil Wholesale | Bulk & Private Label | Morocco",
-  description: "Buy certified organic Moroccan argan oil wholesale. Cold-pressed bulk oil and private label from Agadir. ECOCERT, USDA Organic, COA every batch. MOQ from 5 liters. Ship USA, EU & worldwide.",
+  description: "Buy certified organic Moroccan argan oil wholesale. Cold-pressed bulk oil & private label from Agadir. ECOCERT, USDA Organic, COA. Worldwide export.",
+  icons: {
+    icon: [
+      { url: "/assets/img/logo.png" },
+      { url: "/icon.png" },
+    ],
+    apple: [
+      { url: "/assets/img/logo.png", sizes: "180x180", type: "image/png" },
+    ],
+  },
   keywords: [
     "argan oil wholesale",
     "bulk argan oil",
